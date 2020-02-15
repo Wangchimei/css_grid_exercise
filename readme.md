@@ -1,12 +1,16 @@
 # CSS Grid
 
-## CSS Grid Browser Support
+#### CSS Grid Browser Support
 
-[Caniuse](https://caniuse.com/#feat=css-grid)
+Check on [Caniuse.com](https://caniuse.com/#feat=css-grid)
+
+Quick jump to:
+[Properties for the Parent](https://github.com/Wangchimei/css_grid_exercise#grid-properties-for-the-parent-grid-container)
+[Properties for the Children](https://github.com/Wangchimei/css_grid_exercise#grid-properties-for-the-children-grid-items)
 
 ## Terminology
 
-#### Grid Container & Grid Items
+### Grid Container & Grid Items
 
 ```
 <div class="container">
@@ -28,32 +32,30 @@ In this case, `<p class="sub-item"></p>` is not a grid item.
 }
 ```
 
-#### Grid Line
+### Grid Line
 
 The dividing lines that make up the structure of the grid.  
 They can be either vertical ("column grid lines") or horizontal ("row grid lines").
 
 For example, `grid-template-columns: repeat(3, 1fr);` will show 3 columns, which means there are 4 grid lines (n + 1).
 
-#### Grid Track
+### Grid Track
 
 The space between two adjacent grid lines.
 
-#### Grid Cell
+### Grid Cell
 
 A single "unit" of the grid.
 
-#### Grid Area
+### Grid Area
 
 The total space surrounded by four grid lines.  
 A grid area may be comprised of any number of grid cells.  
 This is really useful of building a layout template.
 
-## Grid Properties
+## Grid Properties for the Parent (Grid Container)
 
-### Properties for the Parent (Grid Container)
-
-#### display
+### display
 
 ```
 .container {
@@ -65,7 +67,7 @@ This is really useful of building a layout template.
 - grid - generates a block-level grid
 - inline-grid - generates an inline-level grid
 
-#### grid-template-columns & grid-template-rows
+### grid-template-columns & grid-template-rows
 
 ```
 .container {
@@ -82,7 +84,7 @@ To define repeating patterns, use the `repeat()` notation to streamline things.
 Note: The free space is calculated after any non-flexible items.  
 `grid-template-columns: 1fr 50px 1fr 1fr;` : the total amount of free space available to the fr units doesn't include the 50px.
 
-#### grid-template-areas
+### grid-template-areas
 
 Defines a grid template by referencing the names of the grid areas which are specified with the grid-area property.  
 Repeating the name of a grid area causes the content to span those cells.  
@@ -113,12 +115,12 @@ A period `.` signifies an empty cell.
 }
 ```
 
-#### grid-template (Not recommeded)
+### grid-template (Not recommeded)
 
 A shorthand for setting `grid-template-columns`, `grid-template-rows`, and `grid-template-areas` in a single declaration.  
 However, `grid-template` doesn't reset `grid-auto-columns`, `grid-auto-rows`, and `grid-auto-flow`, it's not recommended to use grid-template.
 
-#### grid-column-gap & grid-row-gap
+### grid-column-gap & grid-row-gap
 
 Specifies the size of the grid lines, i.e. setting the width of the gutters between the columns/rows.
 
@@ -131,7 +133,7 @@ Specifies the size of the grid lines, i.e. setting the width of the gutters betw
 }
 ```
 
-#### grid-gap
+### grid-gap
 
 A shorthand for `grid-row-gap` and `grid-column-gap`
 
@@ -143,13 +145,14 @@ A shorthand for `grid-row-gap` and `grid-column-gap`
 }
 ```
 
-#### align-items & justify-items
+### align-items & justify-items
 
 **alignment for every grid item**
 
 - align-items - aligns grid items along the column axis. (vertical)
 - justify-items - aligns grid items along the row axis. (horizontal)
-  Values : `start`, `end`, `center`, `stretch`(default)
+
+Values : `start`, `end`, `center`, `stretch`(default)
 
 ```
 .container {
@@ -158,7 +161,7 @@ A shorthand for `grid-row-gap` and `grid-column-gap`
 }
 ```
 
-#### place-items
+### place-items
 
 place-items sets both `align-items` and `justify-items` in a single declaration.  
 The first value sets `align-items`, the second value `justify-items`.
@@ -169,7 +172,7 @@ The first value sets `align-items`, the second value `justify-items`.
 }
 ```
 
-#### justify-content & align-content
+### justify-content & align-content
 
 **alignment for the whole grid container**
 
@@ -185,7 +188,7 @@ The first value sets `align-items`, the second value `justify-items`.
 }
 ```
 
-#### place-content
+### place-content
 
 place-content sets both `align-content` and `justify-content` in a single declaration.
 The first value sets `align-content`, the second value `justify-content`.
@@ -196,7 +199,7 @@ The first value sets `align-content`, the second value `justify-content`.
 }
 ```
 
-#### grid-auto-columns & grid-auto-rows
+### grid-auto-columns & grid-auto-rows
 
 Specifies the size of any auto-generated grid tracks (aka implicit grid tracks).  
 Implicit tracks get created when there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid.
@@ -208,7 +211,7 @@ Implicit tracks get created when there are more grid items than cells in the gri
 }
 ```
 
-#### grid-auto-flow
+### grid-auto-flow
 
 If you have grid items that you don't explicitly place on the grid, the auto-placement algorithm kicks in to automatically place the items.
 Values: `row`, `column`, `row dense`, `column dense`
@@ -235,14 +238,14 @@ Values: `row`, `column`, `row dense`, `column dense`
 
 When `grid-auto-flow: row;`, item-b, item-c and item-d will flow across the available rows.
 
-### Properties for the Children (Grid Items)
+## Grid Properties for the Children (Grid Items)
 
-##### grid-column-start & grid-column-end
+### grid-column-start & grid-column-end
 
 Determines a grid item's location within the grid by referring to specific grid lines.  
 `grid-column-start` and `grid-column-end` specify where the item begins and ends on the column axis (vertical).
 
-##### grid-row-start & grid-row-end
+### grid-row-start & grid-row-end
 
 Determines a grid item's location within the grid by referring to specific grid lines.  
 `grid-row-start` and `grid-row-end` specify where the item begins and ends on the row axis (horizontal).
@@ -262,7 +265,7 @@ item-a is going to ...
 start from column line # 1 and span 4 grid cells (which is row line #5).
 start from row line #2 and span 2 grid cells (which is row line #4).
 
-#### grid-column & grid-row
+### grid-column & grid-row
 
 - grid-column - a shorthand for `grid-column-start` and `grid-column-end`
 - grid-row - a shorthand for `grid-row-start` and `grid-row-end`
@@ -274,7 +277,7 @@ start from row line #2 and span 2 grid cells (which is row line #4).
 }
 ```
 
-#### grid-area
+### grid-area
 
 1. Gives an item a name so that it can be referenced by a template created with the `grid-template-areas` property.
 
@@ -319,3 +322,29 @@ start from row line #2 and span 2 grid cells (which is row line #4).
 ```
 
 Note: `last-line`, `col4-start`, `-1` can also be used.
+
+### justify-self & align-self
+
+This value applies to a grid item inside a single cell.
+
+- justify-self - aligns a grid item inside a cell along the row axis (vertial)
+- align-self - aligns a grid item inside a cell along the column axis (horizontal)
+
+Values : `start`, `end`, `center`, `stretch`(default)
+
+```
+.item-a {
+  justify-self: start;
+  align-self: center;
+}
+```
+
+### place-self
+
+place-self sets both `align-self` and `justify-self` in a single declaration.
+
+```
+.item-a {
+  place-self: center start;
+}
+```
