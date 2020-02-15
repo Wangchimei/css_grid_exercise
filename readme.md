@@ -256,6 +256,15 @@ When `grid-auto-flow: row;`, item-b, item-c and item-d will flow across the avai
 
 ## Grid Properties for the Children (Grid Items)
 
+| properties                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------- |
+| [grid-column-start & grid-column-end](https://github.com/Wangchimei/css_grid_exercise#grid-column-start--grid-column-end) |
+| [grid-row-start & grid-row-end](https://github.com/Wangchimei/css_grid_exercise#grid-row-start--grid-row-end)             |
+| [grid-column & grid-row](https://github.com/Wangchimei/css_grid_exercise#grid-column--grid-row)                           |
+| [grid-area](https://github.com/Wangchimei/css_grid_exercise#grid-area-1)                                                  |
+| [justify-self & align-self](https://github.com/Wangchimei/css_grid_exercise#justify-self--align-self)                     |
+| [place-self](https://github.com/Wangchimei/css_grid_exercise#place-self)                                                  |
+
 ### grid-column-start & grid-column-end
 
 Determines a grid item's location within the grid by referring to specific grid lines.  
