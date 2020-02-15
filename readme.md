@@ -4,8 +4,9 @@
 
 Check on [Caniuse.com](https://caniuse.com/#feat=css-grid)
 
-Quick jump to:
-[Properties for the Parent](https://github.com/Wangchimei/css_grid_exercise#grid-properties-for-the-parent-grid-container)
+#### Quick jump to:
+
+[Properties for the Parent](https://github.com/Wangchimei/css_grid_exercise#grid-properties-for-the-parent-grid-container)  
 [Properties for the Children](https://github.com/Wangchimei/css_grid_exercise#grid-properties-for-the-children-grid-items)
 
 ## Terminology
@@ -54,6 +55,21 @@ A grid area may be comprised of any number of grid cells.
 This is really useful of building a layout template.
 
 ## Grid Properties for the Parent (Grid Container)
+
+| properties                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
+| [display](https://github.com/Wangchimei/css_grid_exercise#display)                                                                      |
+| [grid-template-columns & grid-template-rows](https://github.com/Wangchimei/css_grid_exercise#grid-template-columns--grid-template-rows) |
+| [grid-template-areas](https://github.com/Wangchimei/css_grid_exercise#grid-template-areas)                                              |
+| [grid-template](https://github.com/Wangchimei/css_grid_exercise#grid-template-not-recommeded)                                           |
+| [grid-column-gap & grid-row-gap](https://github.com/Wangchimei/css_grid_exercise#grid-column-gap--grid-row-gap)                         |
+| [grid-gap](https://github.com/Wangchimei/css_grid_exercise#grid-gap)                                                                    |
+| [align-items & justify-items](https://github.com/Wangchimei/css_grid_exercise#align-items--justify-items)                               |
+| [place-items](https://github.com/Wangchimei/css_grid_exercise#place-items)                                                              |
+| [justify-content & align-content](https://github.com/Wangchimei/css_grid_exercise#justify-content--align-content)                       |
+| [place-content](https://github.com/Wangchimei/css_grid_exercise#place-content)                                                          |
+| [grid-auto-columns & grid-auto-rows](https://github.com/Wangchimei/css_grid_exercise#grid-auto-columns--grid-auto-rows)                 |
+| [grid-auto-flow](https://github.com/Wangchimei/css_grid_exercise#grid-auto-flow)                                                        |
 
 ### display
 
